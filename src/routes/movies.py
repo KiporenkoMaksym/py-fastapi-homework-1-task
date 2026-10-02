@@ -9,6 +9,7 @@ from database import get_db
 
 router = APIRouter()
 
+
 @router.get(
     "/movies/",
     response_model=movies.MovieListResponseSchema
@@ -69,6 +70,7 @@ async def get_movies(
         "total_pages": total_pages,
         "total_items": total_items,
     }
+
 
 @router.get(
     "/movies/{movie_id}/",
